@@ -1,11 +1,10 @@
-﻿using Bulky.DataAcess.Data;
-using Bulky.DataAcess.Repository.IRepository.cs;
+﻿using Bulky.DataAcess.Repository.IRepository.cs;
 using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyWeb.Controllers
+namespace BulkyWeb.Areas.Admin.Controllers
 {
-    
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
