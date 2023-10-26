@@ -24,11 +24,6 @@ public class ProductController : Controller
     [HttpPost]
     public IActionResult Create(Product obj)
     {
-        if (obj.Title == obj.Title.ToString())
-        {
-            ModelState.AddModelError("title", "The Author cannot exactly match the Title");
-        }
-            
         if (ModelState.IsValid)
         {
             _unitOfWork.Product.Add(obj);
